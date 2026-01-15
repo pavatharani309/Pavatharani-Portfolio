@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(2,6,23,0.9);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  z-index: 10;
+}
+
+.header a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  color: #38bdf8;
+  margin-top: 10px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 60px;
+}
+
+/* About */
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about img {
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+}
+
+/* Skills */
+.skills span {
+  background: #1e293b;
+  padding: 10px 20px;
+  margin: 8px;
+  display: inline-block;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  transform: translateY(-5px);
+  background: #38bdf8;
+  color: black;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Theme Button */
+.theme-btn {
+  background: none;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* LIGHT THEME */
+body.light {
+  background: #f8fafc;
+  color: #020617;
+}
+
+body.light .header {
+  background: rgba(248,250,252,0.9);
+}
+
+body.light .header a {
+  color: #020617;
+}
+
+body.light .card,
+body.light .skills span {
+  background: #e2e8f0;
+  color: #020617;
+}
+
+body.light .skills span:hover {
+  background: #38bdf8;
+  color: black;
+}
